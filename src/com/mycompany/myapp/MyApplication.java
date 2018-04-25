@@ -75,7 +75,7 @@ public class MyApplication {
              ConnectionRequest con = new ConnectionRequest();
                 String name = email.getText();
                 String pswd = password.getText();              
-                con.setUrl("http://127.0.0.1:8000/loginM?email="+name+"&password="+pswd);
+                con.setUrl("http://127.0.0.1:8000/mobile/loginM?email="+name+"&password="+pswd);
                
                 con.addResponseListener(new ActionListener<NetworkEvent>() {
                     @Override

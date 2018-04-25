@@ -28,7 +28,7 @@ public class ServiceProduit {
     public ArrayList<Produit> getProducts(){
          ArrayList<Produit> listProduit = new ArrayList<>();
         ConnectionRequest con = new ConnectionRequest();
-        con.setUrl("http://127.0.0.1:8000/produits/PrduitMobile");
+        con.setUrl("http://127.0.0.1:8000/mobile/PrduitMobile");
         con.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
             public void actionPerformed(NetworkEvent evt) {
@@ -62,7 +62,7 @@ public class ServiceProduit {
     public ProduitHerbo showProduitHerboo(int id){
         ProduitHerbo p = new ProduitHerbo();
         ConnectionRequest con = new ConnectionRequest();
-        con.setUrl("http://127.0.0.1:8000/produits/"+id+"/showM");
+        con.setUrl("http://127.0.0.1:8000/mobile/"+id+"/showM");
         con.addResponseListener((NetworkEvent evt) -> {
            JSONParser jsonp = new JSONParser();
             try {
